@@ -63,17 +63,18 @@ Total Chickens: 8 Total Loss: 0
 
 
 ---
+🚀 Areas for Improvement (Updated)
 
-## 🚀 Areas for Improvement
+## 🚀 Areas for Improvement (Updated)
 
-| Area              | Potential Upgrade                                  |
-|-------------------|----------------------------------------------------|
-| Data Persistence  | Switch from CSV to SQLite for better querying      |
-| Input Validation  | Add checks for numbers and required fields         |
-| Visualization     | Use `matplotlib` to graph amounts/loss by country  |
-| User Experience   | Add confirmation prompts and undo options          |
-| Reporting         | Export filtered views or summaries to PDF/CSV      |
-| Scalability       | Use `pandas` for complex filtering and grouping    |
-| GUI Option        | Add Tkinter or Flask Web Interface for friendliness|
-
----
+| Area              | Current Progress                                 | Potential Upgrade                                                                 |
+|-------------------|--------------------------------------------------|------------------------------------------------------------------------------------|
+| ✅ Input Validation  | Regex-based checks for all fields added         | Expand to include date/time validation and prevent duplicates                     |
+| ✅ User Experience   | Clear prompts, confirmations, smart defaults    | Add undo support, keyboard shortcuts, and improved error messages                 |
+| Data Persistence  | CSV used for lightweight storage                 | Switch to SQLite or TinyDB for structured, scalable querying                      |
+| Visualization     | Text-based terminal output                       | Use `matplotlib` or `seaborn` to graph trends by country, breed, and loss         |
+| Reporting         | CLI summary with totals                          | Export to CSV, PDF, or Excel using `pandas`, `reportlab`, or `xlsxwriter`         |
+| Scalability       | Works well for small local files                 | Integrate `pandas` for filtering, grouping, and real-time analytics               |
+| GUI Option        | CLI-only menu interface                          | Build a GUI using `Tkinter` or a lightweight Flask web dashboard                  |
+| Advanced Filters  | Filter by country (regex-based)                  | Add multi-field filters (e.g., country + breed), amount/loss range queries        |
+| Data Integrity    | Input normalized and validated                   | Add audit logging and change tracking (e.g., who edited what, when)              |
