@@ -1,0 +1,80 @@
+# .gitignore
+__pycache__/
+*.log
+*.csv
+.env
+venv/
+
+# Ignore Python bytecode files
+*.pyc
+*.pyo
+*.pyd
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+# Ignore virtual environment directories
+.env/
+# Ignore IDE specific files
+.vscode/
+.idea/
+# Ignore system files
+.DS_Store
+Thumbs.db
+# Ignore coverage reports
+coverage.xml
+*.cover
+# Ignore build directories
+build/
+dist/
+# Ignore package distribution files
+*.egg-info/
+# Ignore test output files
+test_output/
+# Ignore Docker files
+Dockerfile
+docker-compose.yml
+# Ignore log files
+*.log
+# Ignore temporary files
+*.tmp
+# Ignore configuration files
+config.yaml
+# Ignore data files
+data/*.csv
+# Ignore secrets
+secrets.json
+# Ignore cache directories
+.cache/
+# Ignore documentation build directories
+docs/_build/
+# Ignore PyInstaller files
+*.spec
+# Ignore pipenv files
+Pipfile.lock
+# Ignore poetry files
+poetry.lock
+# Ignore coverage directories
+.coverage
+# Ignore SQL files
+*.sql
+# Ignore backup files
+*.bak
+# Ignore IDE specific settings
+*.sublime-workspace
+*.sublime-project
+# Ignore macOS specific files
+.AppleDouble
+.LSOverride
+# Ignore Windows specific files
+Thumbs.db
+# Ignore Python virtual environment directories
+venv/
+# Ignore test directories
+tests/
+# Ignore migrations directories
+migrations/
+# Ignore static files
+static/
+# Ignore media files
+media/
+
+
