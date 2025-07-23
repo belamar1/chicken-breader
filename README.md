@@ -78,3 +78,47 @@ Total Chickens: 8 Total Loss: 0
 | GUI Option        | CLI-only menu interface                          | Build a GUI using `Tkinter` or a lightweight Flask web dashboard                  |
 | Advanced Filters  | Filter by country (regex-based)                  | Add multi-field filters (e.g., country + breed), amount/loss range queries        |
 | Data Integrity    | Input normalized and validated                   | Add audit logging and change tracking (e.g., who edited what, when)              |
+
+# ☁️ Serverless ELT Pipeline (AWS Lambda)
+To scale the Chicken-UI data processing for larger datasets or future integrations (e.g., dashboards, cloud storage, schools uploading data), we propose an AWS Lambda-powered ELT pipeline.
+
+🛠 Tools & Services
+Stage	Service	Role
+Extract	Amazon S3 + Lambda	Triggered when a new chicken_data.csv is uploaded to S3
+Load	Lambda + RDS/DynamoDB	Loads raw data into a staging table or NoSQL collection
+Transform	Lambda or AWS Glue	Cleans, validates (e.g., regex), and normalizes the data
+Store	Amazon RDS/Redshift	Stores clean records for reporting and querying
+Analytics	QuickSight or Athena	Used to visualize trends like loss by country or breed
+
+# Pipeline flow:
+
+User uploads CSV to S3
+        ↓
+Lambda Function (Extract + Load)
+        ↓
+RDS / DynamoDB Staging Table
+        ↓
+Lambda Function (Transform + Clean)
+        ↓
+Final Database / Data Warehouse
+        ↓
+Optional: Dashboards (QuickSight) or API layer
+
+🔍 Example Use Case
+
+field teams upload chicken records as CSV files.
+
+AWS Lambda automatically processes the files.
+
+Cleaned data is sent to a cloud database (PostgreSQL or DynamoDB).
+
+Admins or educators view data via dashboards or reports.
+
+✅ Why Lambda?
+No server maintenance
+
+Auto-scales with file size
+
+Secure via IAM & S3 triggers
+
+Perfect for educational + community-led deployments
